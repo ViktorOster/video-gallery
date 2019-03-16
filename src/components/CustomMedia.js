@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import playImg from '../images/play-xxl.png';
+import pauseImg from '../images/pause-xxl.png';
 
 let myTimeout;
 
@@ -21,9 +23,7 @@ class CustomMedia extends Component {
     render() {
         let playPauseClass = this.state.isPlaying ? " playing" : " paused";
         let displayClass = this.props.isHidden ? " hidden" : "";
-        let playPauseIcon = this.state.isPlaying ?
-            "https://www.iconsdb.com/icons/preview/white/pause-xxl.png" :
-            "https://www.iconsdb.com/icons/preview/white/play-xxl.png";
+        let playPauseIcon = this.state.isPlaying ? pauseImg : playImg;
         // if (this.refs.video != null) {
         //     this.refs.video.volume = this.props.isHidden ? 0 : 0.5;
         // }
